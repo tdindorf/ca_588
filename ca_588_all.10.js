@@ -4,6 +4,7 @@ import {
   ca_588_2R_draw 
 } from './modules/svg.ca_588_2R.10.js';
 
+/*
 import {
   ca_588_2R_arrays
 } from './modules/svg.ca_588_2R_arrays.10.js';
@@ -19,6 +20,7 @@ import {
   mdl_ca_divTxt,
   mdl_ca_arrayFltr
 } from './modules/svg.ca_utils.31.js';
+*/
 
 // make main function public
 window.ca_588_2R_opts = ca_588_2R_opts
