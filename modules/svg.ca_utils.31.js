@@ -54,7 +54,7 @@ export function mdl_ca_divTxt( me, {
         parU = document.createElement("p");
 
     // create data list
-    for (i = 0; i < data.length; i++) {
+    for (var i = 0; i < data.length; i++) {
         parL.innerHTML += "<li>" + data[i] + "</li> ";
     }
 
