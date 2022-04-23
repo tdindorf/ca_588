@@ -166,7 +166,7 @@ export function ca_588_2R_parse(me, data, series = true) {
 
     // list values: expand to complete "The following are known: __" + value + unit
     var textData = [];
-    for (i = 0; i < show.length; i++) {
+    for (var i = 0; i < show.length; i++) {
         textData.push(
             textBits[show[i]] + " = " + allVals[show[i]]);
     }
