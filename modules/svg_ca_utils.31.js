@@ -6,7 +6,7 @@
 * mdl_ca_arrayFltr: selects question constelation
 */
 /*********** SVG RESIZE *************/
-function mdl_svg_sizeMe(svg, box, {} = {}) {
+export function mdl_svg_sizeMe(svg, box, {} = {}) {
     var bBox = box.bbox();
     var vBox = bBox.x + " " + bBox.y + " " + bBox.width + " " + bBox.height;
     svg.viewbox(vBox); // svg.js: viewbox; d3: viewBox
@@ -21,7 +21,7 @@ function mdl_svg_sizeMe(svg, box, {} = {}) {
  * * tdm_qtext2: mid <p> (50% wide, to the left of a dgrm)
  * * tdm_qtext3: bottom <p> (100% wide, before 'Answer' field)
  */
-function mdl_ca_divTxt( me, {
+export function mdl_ca_divTxt( me, {
         stems = [],
         data = [],
         question = "",
@@ -100,7 +100,7 @@ function mdl_ca_divTxt( me, {
  * Assumes [[shown], level, asked]
  * Returns [shown]
  */
-function mdl_ca_arrayFltr(arr, level, asked, option = 0) {
+export function mdl_ca_arrayFltr(arr, level, asked, option = 0) {
 
   // ioslate constelations matching level and asked
     var tempArray = arr.filter(function(e) {
