@@ -9,7 +9,7 @@
  * Q: what is asked for (0-8) [I/U, U/I, P0], [R1, V/I1, P1], [R2, V/I2, P2]
  * option: which constelation, limited via %=
  */
-function ca_588_2R_opts(me, {family = 0, series = true, data = [], L = 1, Q = 0, opt = 0} = {}) {
+export function ca_588_2R_opts(me, {family = 0, series = true, data = [], L = 1, Q = 0, opt = 0} = {}) {
     //var permutations = ca_arrays_588(family);
     //var shown = ca_masterFilter(ca_arrays_500(family), L, Q, opt);
     //data.push(shown);
@@ -23,7 +23,7 @@ function ca_588_2R_opts(me, {family = 0, series = true, data = [], L = 1, Q = 0,
  * data [I/U0, R1, R2, [show_1, show_2, show_3], ask_for]
  * series: 1 (default), parallel 2/false
  */
-function ca_588_2R_parse(me, data, series = true) {
+export function ca_588_2R_parse(me, data, series = true) {
   var units = [],  allVals = [], textBits = [], dgrmDefs = [], dgrmAsked = [], dgrmShow = [];
   
   var oU = ca_588_Units(),
@@ -179,7 +179,7 @@ function ca_588_2R_parse(me, data, series = true) {
  * relies on svg.js
  * options for series or parallel
 */
-function ca_588_2R_draw(me, {
+export function ca_588_2R_draw(me, {
     R1 = "",
     V1 = "",
     I1 = "",
