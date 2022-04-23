@@ -1,6 +1,6 @@
 /*********** 588 VIRP Phrasings etc *************/
 // ca_500 VIRP phrasing: of data in list and question
-function ca_588_TextBits() {
+export function ca_588_TextBits() {
     var textBits = {
         // text segments represenating data in circuit questions
         I: "<b>I</b>, the current in this branch",
@@ -27,7 +27,7 @@ function ca_588_TextBits() {
 }
 
 // ca_500 VIRP units: symbol, name, sf/dp for answers
-function ca_588_Units() {
+export function ca_588_Units() {
     // units used in circuit questions
     var units = {
         I: ["mA", "<b>milli</b>amperes", 3],
@@ -39,7 +39,7 @@ function ca_588_Units() {
 }
 
 // ca_500 VIRP display: data on diagrams or in lists
-function ca_588_Display_Data({
+export function ca_588_Display_Data({
   I0 = 1, V0 = 1, P0 = 1,
   R1 = 1, I1 = 1, V1 = 1, P1 = 1,
   R2 = 1, I2 = 1, V2 = 1, P2 = 1,
