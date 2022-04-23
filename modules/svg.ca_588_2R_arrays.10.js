@@ -6,7 +6,7 @@
  * Calling function interprets values [0]-[8], e.g.
  * 2Rp_P: [U, I0, P0; R1, I1, P1; R2, I2, P2]
  */
-function ca_588_2R_arrays(i) {
+export function ca_588_2R_arrays(i) {
   /*
   * for 2R incl P, 9 variables [0-8]:
   * [uniform, split, power; R1, split1, power1; R2, split2, power2]
