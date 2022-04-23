@@ -1,3 +1,19 @@
+import {
+  ca_588_2R_arrays
+} from './svg.ca_588_2R_arrays.10.js';
+
+import {
+  ca_588_TextBits,
+  ca_588_Units,
+  ca_588_Display_Data 
+} from './svg.ca_588_txt.10.js';
+
+import {
+  mdl_svg_sizeMe,
+  mdl_ca_divTxt,
+  mdl_ca_arrayFltr
+} from './mdl_ca_utils.31.js';
+
 /*********** 588 VIRP 2R functions *************/
 
 /*
