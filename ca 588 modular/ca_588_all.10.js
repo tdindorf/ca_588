@@ -19,3 +19,6 @@ import {
   mdl_ca_divTxt,
   mdl_ca_arrayFltr
 } from mdl_ca_utils.31;
+
+// make main function public
+window.ca_588_2R_opts = ca_588_2R_opts
