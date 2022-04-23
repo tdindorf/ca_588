@@ -50,33 +50,37 @@ export function ca_588_2R_parse(me, data, series = true) {
       show = data[3],
       ask_for = data[4];
   
+  var I0, I1, I2;
+  var V0, V1, V2;
+  var P0, P1, P2;
+  
   // determine all values (I012, V012, P012)
   if (series){
-    var I0 = data[0] * 1,
+        I0 = data[0] * 1;
             
-        V1 = R1 * I0,
-        V2 = R2 * I0,
-        V0 = V1 + V2,
+        V1 = R1 * I0;
+        V2 = R2 * I0;
+        V0 = V1 + V2;
         
-        P1 = R1 * I0 ** 2,
-        P2 = R2 * I0 ** 2,
-        P0 = P1 + P2,
+        P1 = R1 * I0 ** 2;
+        P2 = R2 * I0 ** 2;
+        P0 = P1 + P2;
         
-        I1 = I0,
+        I1 = I0;
         I2 = I0;
 
   } else {
-    var V0 = data[0] * 1,
+        V0 = data[0] * 1;
         
-        I1 = V0 / R1,
-        I2 = V0 / R2,
-        I0 = I1 + I2,
+        I1 = V0 / R1;
+        I2 = V0 / R2;
+        I0 = I1 + I2;
 
-        P1 = V0 ** 2 / R1,
-        P2 = V0 ** 2 / R2,
-        P0 = P1 + P2,
+        P1 = V0 ** 2 / R1;
+        P2 = V0 ** 2 / R2;
+        P0 = P1 + P2;
 
-        V1 = V0,
+        V1 = V0;
         V2 = V0;
   }
 
@@ -111,13 +115,13 @@ export function ca_588_2R_parse(me, data, series = true) {
         dgrmShow = dgrmAsked.map(function(e, i) {
             // all symbol + value except R
             return e.length ? e + ' = ' + allVals[i] : allVals[i];
-        })
+        });
 
     // ************* end of diagram defaults ********
     //***********************************************
 
     //************ add shown values *****************
-    for (i = 0; i < show.length; i++) {
+    for (var i = 0; i < show.length; i++) {
         dgrmDefs[show[i]] = dgrmShow[show[i]];
     }
 
@@ -130,7 +134,7 @@ export function ca_588_2R_parse(me, data, series = true) {
         P1: dgrmDefs[5],
         R2: dgrmDefs[6],
         P2: dgrmDefs[8]
-  }
+  };
   
   if (series) {
     dgrData.I0 = dgrmDefs[0],
@@ -176,7 +180,7 @@ export function ca_588_2R_parse(me, data, series = true) {
 
     //****************************************
     // call diagram drawing function
-      dgrData.series = series
+      dgrData.series = series;
       ca_588_2R_draw(me, dgrData);
   
     // call text insert function
@@ -231,7 +235,7 @@ export function ca_588_2R_draw(me, {
     //******************************************
     
     var strStyle =
-    "svg { fill: none; border: solid #00f 1px; padding: 2%; margin: 0 5% 0 10%; font: 0.8em sans-serif; text-anchor: middle } text.shadow { stroke: #fff; stroke-width: .25em } .wire { stroke: grey } circle.origin { stroke: #000; --r: 2 } rect.res { stroke: brown; fill: #fff } path.vlt { stroke: #00f; fill: none } path.cur { stroke: red; fill: none } text.res { fill: brown } text.cur { fill: red } text.vlt { fill: #00f } text.pow { fill: green } .start { text-anchor: start } .end { text-anchor: end }"
+    "svg { fill: none; border: solid #00f 1px; padding: 2%; margin: 0 5% 0 10%; font: 0.8em sans-serif; text-anchor: middle } text.shadow { stroke: #fff; stroke-width: .25em } .wire { stroke: grey } circle.origin { stroke: #000; --r: 2 } rect.res { stroke: brown; fill: #fff } path.vlt { stroke: #00f; fill: none } path.cur { stroke: red; fill: none } text.res { fill: brown } text.cur { fill: red } text.vlt { fill: #00f } text.pow { fill: green } .start { text-anchor: start } .end { text-anchor: end }";
     
     svg.element("style").words(strStyle);
     //*********** DEFINITIONS ******************
@@ -290,7 +294,7 @@ export function ca_588_2R_draw(me, {
         [0, -1.25],
         [0, 1],
         [1, 1]
-    ]
+    ];
     
     // px scaling factor for positions
     var scale = 50;
@@ -312,7 +316,7 @@ export function ca_588_2R_draw(me, {
     
     // if parallel, add branch
     if (!series){
-        circuit.path(pathBranch).addClass("wire")
+        circuit.path(pathBranch).addClass("wire");
     }
     
     // emf applied
