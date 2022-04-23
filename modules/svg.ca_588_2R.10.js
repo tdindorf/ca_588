@@ -12,7 +12,7 @@ import {
   mdl_svg_sizeMe,
   mdl_ca_divTxt,
   mdl_ca_arrayFltr
-} from './mdl_ca_utils.31.js';
+} from './svg.ca_utils.31.js';
 
 /*********** 588 VIRP 2R functions *************/
 
